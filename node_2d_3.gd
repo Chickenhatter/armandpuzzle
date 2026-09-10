@@ -13,30 +13,21 @@ var yal = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if a == true:
-		print($"../Node2D".positions)
 		
-		print($"../Node2D".positions[xal][yal])
 		if Input.is_action_just_pressed('ui_w'):
 			lerpup()
-			print($Node2D/arm.global_position)
 		if Input.is_action_just_pressed('ui_s'):
 			lerpdown()
-			print($Node2D/arm.global_position)
 		if Input.is_action_just_pressed('ui_a'):
 			lerpleft()
-			print($Node2D/arm.global_position)
 		if Input.is_action_just_pressed('ui_d'):
 			lerpright()
-			print($Node2D/arm.global_position)
 		if holding == false:
 			if Input.is_action_just_pressed('ui_accept'):
-				print('a')
 				if $"../Node2D".positions[xal][yal] != 'x':
-					print('a')
 					holding = true
 					heald = $"../Node2D".positions[xal][yal]
 					$"../Node2D".positions[xal][yal] = 'x'
-					print(heald)
 		else:
 			#if Input.is_action_just_pressed('ui_w'):
 				#if Global.positions[xal][yal-1] == 'x':

@@ -33,7 +33,6 @@ func randoment():
 		i += 1
 		z = 0
 	positions = positions2.duplicate()
-	print(positions)
 
 func lookfor(a):
 	for x in range(positions.size()):
