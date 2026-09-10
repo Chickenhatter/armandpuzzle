@@ -1,5 +1,6 @@
 extends Node
-var positions = [['a', 'x', 'b', 'c'],['d', 'e', 'f', 'g'],['h', 'i', 'j', 'k'],['l', 'm', 'n', 'o'],['p', 'q', 'r', 's']]
+@onready var positions = [['a', 'x', 'b', 'c'],['d', 'e', 'f', 'g'],['h', 'i', 'j', 'k'],['l', 'm', 'n', 'o'],['p', 'q', 'r', 's']]
+@onready var positions2 = [['a', 'x', 'b', 'c'],['d', 'e', 'f', 'g'],['h', 'i', 'j', 'k'],['l', 'm', 'n', 'o'],['p', 'q', 'r', 's']]
 var trupos = [[Vector2(0.0,0.0), Vector2(100.0,0.0), Vector2(200.0,0.0), Vector2(300.0,0.0)],
 [Vector2(0.0,100.0), Vector2(100.0,100.0), Vector2(200.0,100.0), Vector2(300.0,100.0)],
 [Vector2(0.0,200.0), Vector2(100.0,200.0), Vector2(200.0,200.0), Vector2(300.0,200.0)],
@@ -24,13 +25,14 @@ func randoment():
 	i = 0
 	z = 0
 	list.shuffle()
-	for row in positions:
+	for row in positions2:
 		for g in row:
-			positions[i][z] = list[numb]
+			positions2[i][z] = list[numb]
 			numb += 1
 			z += 1
 		i += 1
 		z = 0
+	positions = positions2.duplicate()
 	print(positions)
 
 func lookfor(a):

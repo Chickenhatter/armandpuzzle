@@ -314,6 +314,7 @@ animations = [{
 script = ExtResource("1_1bvp3")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Node2D" unique_id=644242758]
+position = Vector2(148, 206)
 
 [node name="Node2D2" type="Node2D" parent="Node2D" unique_id=1935381678]
 scale = Vector2(1.401, 1.401)
@@ -391,7 +392,7 @@ position = Vector2(71.710526, 0)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Node2D2/row2/b2/Node2D" unique_id=450864768]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_7mycd")
-frame_progress = 0.96187687
+frame_progress = 0.23181723
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D2/row2/b2/Node2D" unique_id=49929478]
 

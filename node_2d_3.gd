@@ -13,7 +13,9 @@ var yal = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if a == true:
-		#print(Global.positions[xal][yal])
+		print($"../Node2D".positions)
+		
+		print($"../Node2D".positions[xal][yal])
 		if Input.is_action_just_pressed('ui_w'):
 			lerpup()
 			print($Node2D/arm.global_position)
@@ -29,11 +31,11 @@ func _process(delta: float) -> void:
 		if holding == false:
 			if Input.is_action_just_pressed('ui_accept'):
 				print('a')
-				if Global.positions[xal][yal] != 'x':
+				if $"../Node2D".positions[xal][yal] != 'x':
 					print('a')
 					holding = true
-					heald = Global.positions[xal][yal]
-					Global.positions[xal][yal] = 'x'
+					heald = $"../Node2D".positions[xal][yal]
+					$"../Node2D".positions[xal][yal] = 'x'
 					print(heald)
 		else:
 			#if Input.is_action_just_pressed('ui_w'):
@@ -58,12 +60,16 @@ func _process(delta: float) -> void:
 					#lerpup()
 			#
 			if Input.is_action_just_pressed('ui_accept'):
-				if Global.positions[xal][yal] == 'x':
+				if $"../Node2D".positions[xal][yal] == 'x':
 					holding = false
-					Global.positions[xal][yal] = heald
+					$"../Node2D".positions[xal][yal] = heald
 					heald = ''
 	
 	carrying()
+	
+	if $"../Node2D".positions == [['a', 'b', 'c', 'x'],['d', 'e', 'f', 'g'],['h', 'i', 'j', 'k'],['l', 'm', 'n', 'o'],['p', 'q', 'r', 's']]:
+		await get_tree().create_timer(2.0).timeout
+		newpos()
 
 
 func lerpup():
@@ -169,7 +175,6 @@ func newpos():
 		var lookfor = dictil.keys()[i]
 		var place = $"../Node2D".lookfor(lookfor)
 		var the_node = dictil.values()[i]
-		print(the_node.global_position)
 		var tween = create_tween()
 		tween.tween_property(the_node, "global_position", place, 1.0)
 		
