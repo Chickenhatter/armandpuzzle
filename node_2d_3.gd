@@ -29,6 +29,7 @@ func _process(delta: float) -> void:
 					print('a')
 					holding = true
 					heald = Global.positions[xal][yal]
+					Global.positions[xal][yal] = 'x'
 					print(heald)
 		else:
 			#if Input.is_action_just_pressed('ui_w'):
@@ -53,16 +54,13 @@ func _process(delta: float) -> void:
 					#lerpup()
 			#
 			if Input.is_action_just_pressed('ui_accept'):
-				holding = false
-				Global.positions[xal][yal] = heald
-				heald = ''
+				if Global.positions[xal][yal] == 'x':
+					holding = false
+					Global.positions[xal][yal] = heald
+					heald = ''
 	
-	if heald == 'a':
-		$"../Node2D2/row1/b1".global_position = $Node2D.global_position
-	if heald == 'b':
-		$"../Node2D2/row1/b2".global_position = $Node2D.global_position
-	if heald == 'c':
-		$"../Node2D2/row1/b3".global_position = $Node2D.global_position
+	carrying()
+
 
 
 func lerpup():
@@ -100,3 +98,58 @@ func lerpright():
 		tween.tween_property($Node2D, "position:x", ($Node2D.position.x + 100), 1.0)
 		await get_tree().create_timer(1).timeout
 		a = true
+
+func carrying():
+	carryingfirst()
+	carryingsecond()
+	carryingthird()
+	carryingfourth()
+	carryingfifth()
+
+func carryingfirst():
+	if heald == 'a':
+		$"../Node2D2/row1/b1".global_position = $Node2D.global_position
+	if heald == 'b':
+		$"../Node2D2/row1/b2".global_position = $Node2D.global_position
+	if heald == 'c':
+		$"../Node2D2/row1/b3".global_position = $Node2D.global_position
+
+func carryingsecond():
+	if heald == 'd':
+		$"../Node2D2/row2/b1".global_position = $Node2D.global_position
+	if heald == 'e':
+		$"../Node2D2/row2/b2".global_position = $Node2D.global_position
+	if heald == 'f':
+		$"../Node2D2/row2/b3".global_position = $Node2D.global_position
+	if heald == 'g':
+		$"../Node2D2/row2/b4".global_position = $Node2D.global_position
+
+func carryingthird():
+	if heald == 'h':
+		$"../Node2D2/row3/b1".global_position = $Node2D.global_position
+	if heald == 'i':
+		$"../Node2D2/row3/b2".global_position = $Node2D.global_position
+	if heald == 'j':
+		$"../Node2D2/row3/b3".global_position = $Node2D.global_position
+	if heald == 'k':
+		$"../Node2D2/row3/b4".global_position = $Node2D.global_position
+
+func carryingfourth():
+	if heald == 'l':
+		$"../Node2D2/row4/b1".global_position = $Node2D.global_position
+	if heald == 'm':
+		$"../Node2D2/row4/b2".global_position = $Node2D.global_position
+	if heald == 'n':
+		$"../Node2D2/row4/b3".global_position = $Node2D.global_position
+	if heald == 'o':
+		$"../Node2D2/row4/b4".global_position = $Node2D.global_position
+
+func carryingfifth():
+	if heald == 'p':
+		$"../Node2D2/row5/b1".global_position = $Node2D.global_position
+	if heald == 'q':
+		$"../Node2D2/row5/b2".global_position = $Node2D.global_position
+	if heald == 'r':
+		$"../Node2D2/row5/b3".global_position = $Node2D.global_position
+	if heald == 's':
+		$"../Node2D2/row5/b4".global_position = $Node2D.global_position
