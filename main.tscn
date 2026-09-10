@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
+[ext_resource type="Script" uid="uid://tmfpltu0cqaj" path="res://global.gd" id="1_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://db35g486eyt4v" path="res://assets/IMG_1474 (Copy).jpg" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://bhtxybfaanpca" path="res://assets/pixil-frame-0(24).png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://cdl25e8t6uqso" path="res://node_2d_3.gd" id="2_h2yge"]
@@ -310,6 +311,7 @@ animations = [{
 [node name="Node2D" type="Node2D" parent="." unique_id=226836011]
 
 [node name="Node2D" type="Node2D" parent="Node2D" unique_id=793199363]
+script = ExtResource("1_1bvp3")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Node2D" unique_id=644242758]
 
@@ -389,7 +391,7 @@ position = Vector2(71.710526, 0)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Node2D2/row2/b2/Node2D" unique_id=450864768]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_7mycd")
-frame_progress = 0.9696994
+frame_progress = 0.89065754
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D2/row2/b2/Node2D" unique_id=49929478]
 

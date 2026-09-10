@@ -13,7 +13,7 @@ var yal = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if a == true:
-		print(Global.positions[xal][yal])
+		#print(Global.positions[xal][yal])
 		if Input.is_action_just_pressed('ui_w'):
 			lerpup()
 		if Input.is_action_just_pressed('ui_s'):
@@ -60,7 +60,6 @@ func _process(delta: float) -> void:
 					heald = ''
 	
 	carrying()
-
 
 
 func lerpup():
@@ -153,3 +152,19 @@ func carryingfifth():
 		$"../Node2D2/row5/b3".global_position = $Node2D.global_position
 	if heald == 's':
 		$"../Node2D2/row5/b4".global_position = $Node2D.global_position
+
+var dictil = {'a':$"../Node2D2/row1/b1",'b':$"../Node2D2/row1/b2",'c':$"../Node2D2/row1/b3",
+'d':$"../Node2D2/row2/b1",'e':$"../Node2D2/row2/b2",'f':$"../Node2D2/row2/b3",'g':$"../Node2D2/row2/b4",
+'h':$"../Node2D2/row3/b1",'i':$"../Node2D2/row3/b2",'j':$"../Node2D2/row3/b3",'k':$"../Node2D2/row3/b4",
+'l':$"../Node2D2/row4/b1",'m':$"../Node2D2/row4/b2",'n':$"../Node2D2/row4/b3",'o':$"../Node2D2/row4/b4",
+'p':$"../Node2D2/row5/b1",'q':$"../Node2D2/row5/b2",'r':$"../Node2D2/row5/b3",'s':$"../Node2D2/row5/b4",}
+
+func newpos():
+	$"../Node2D".randoment()
+	for i in range(19):
+		print(i)
+		var lookfor = dictil.keys()[i]
+		var the_node = dictil.values()[i]
+		var tween = create_tween()
+		tween.tween_property($Node2D, "position:x", ($Node2D.position.x + 100), 1.0)
+		
