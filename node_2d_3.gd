@@ -4,7 +4,7 @@ var holding = false
 var heald = ''
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	newpos()
 var xal = 0
 var yal = 0
 
@@ -16,12 +16,16 @@ func _process(delta: float) -> void:
 		#print(Global.positions[xal][yal])
 		if Input.is_action_just_pressed('ui_w'):
 			lerpup()
+			print($Node2D/arm.global_position)
 		if Input.is_action_just_pressed('ui_s'):
 			lerpdown()
+			print($Node2D/arm.global_position)
 		if Input.is_action_just_pressed('ui_a'):
 			lerpleft()
+			print($Node2D/arm.global_position)
 		if Input.is_action_just_pressed('ui_d'):
 			lerpright()
+			print($Node2D/arm.global_position)
 		if holding == false:
 			if Input.is_action_just_pressed('ui_accept'):
 				print('a')
@@ -153,7 +157,7 @@ func carryingfifth():
 	if heald == 's':
 		$"../Node2D2/row5/b4".global_position = $Node2D.global_position
 
-var dictil = {'a':$"../Node2D2/row1/b1",'b':$"../Node2D2/row1/b2",'c':$"../Node2D2/row1/b3",
+@onready var dictil = {'a':$"../Node2D2/row1/b1",'b':$"../Node2D2/row1/b2",'c':$"../Node2D2/row1/b3",
 'd':$"../Node2D2/row2/b1",'e':$"../Node2D2/row2/b2",'f':$"../Node2D2/row2/b3",'g':$"../Node2D2/row2/b4",
 'h':$"../Node2D2/row3/b1",'i':$"../Node2D2/row3/b2",'j':$"../Node2D2/row3/b3",'k':$"../Node2D2/row3/b4",
 'l':$"../Node2D2/row4/b1",'m':$"../Node2D2/row4/b2",'n':$"../Node2D2/row4/b3",'o':$"../Node2D2/row4/b4",
@@ -162,9 +166,10 @@ var dictil = {'a':$"../Node2D2/row1/b1",'b':$"../Node2D2/row1/b2",'c':$"../Node2
 func newpos():
 	$"../Node2D".randoment()
 	for i in range(19):
-		print(i)
 		var lookfor = dictil.keys()[i]
+		var place = $"../Node2D".lookfor(lookfor)
 		var the_node = dictil.values()[i]
+		print(the_node.global_position)
 		var tween = create_tween()
-		tween.tween_property($Node2D, "position:x", ($Node2D.position.x + 100), 1.0)
+		tween.tween_property(the_node, "global_position", place, 1.0)
 		

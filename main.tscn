@@ -391,7 +391,7 @@ position = Vector2(71.710526, 0)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Node2D2/row2/b2/Node2D" unique_id=450864768]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_7mycd")
-frame_progress = 0.89065754
+frame_progress = 0.96187687
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D2/row2/b2/Node2D" unique_id=49929478]
 
@@ -614,3 +614,7 @@ shape = SubResource("RectangleShape2D_rpb1b")
 position = Vector2(-196.99998, 6.9999995)
 scale = Vector2(3.645, 3.645)
 texture = ExtResource("2_0xm2m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=507149164]
+visible = false
+sprite_frames = SubResource("SpriteFrames_7xrwy")
