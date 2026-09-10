@@ -199,6 +199,48 @@ sprite_frames = SubResource("SpriteFrames_rpb1b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D2/row1/b1/Node2D/CharacterBody2D" unique_id=421169529]
 shape = SubResource("RectangleShape2D_7xrwy")
 
+[node name="b2" type="Node2D" parent="Node2D/Node2D2/row1" unique_id=552211634]
+position = Vector2(72, 0)
+
+[node name="Node2D" type="Node2D" parent="Node2D/Node2D2/row1/b2" unique_id=120874562]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Node2D2/row1/b2/Node2D" unique_id=1829907224]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D2/row1/b2/Node2D" unique_id=1327066244]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D2/row1/b2/Node2D/CharacterBody2D" unique_id=2097995971]
+shape = SubResource("RectangleShape2D_7xrwy")
+
+[node name="b3" type="Node2D" parent="Node2D/Node2D2/row1" unique_id=1872766168]
+position = Vector2(144, 0)
+
+[node name="Node2D" type="Node2D" parent="Node2D/Node2D2/row1/b3" unique_id=1294042387]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Node2D2/row1/b3/Node2D" unique_id=1272259271]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D2/row1/b3/Node2D" unique_id=621593234]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D2/row1/b3/Node2D/CharacterBody2D" unique_id=1248692040]
+shape = SubResource("RectangleShape2D_7xrwy")
+
+[node name="b4" type="Node2D" parent="Node2D/Node2D2/row1" unique_id=1587062779]
+position = Vector2(216, 0)
+
+[node name="Node2D" type="Node2D" parent="Node2D/Node2D2/row1/b4" unique_id=1269736629]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Node2D2/row1/b4/Node2D" unique_id=2128564246]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_rpb1b")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Node2D2/row1/b4/Node2D" unique_id=1822363169]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Node2D2/row1/b4/Node2D/CharacterBody2D" unique_id=2081676862]
+shape = SubResource("RectangleShape2D_7xrwy")
+
 [node name="Node2D3" type="Node2D" parent="Node2D" unique_id=1234814900]
 script = ExtResource("2_h2yge")
 
